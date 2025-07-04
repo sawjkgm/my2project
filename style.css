@@ -1,0 +1,289 @@
+/* Общие стили */
+:root {
+    --primary-color: #ff69b4;
+    --secondary-color: #1a1a1a;
+    --text-color: #ffffff;
+    --background-color: #2a2a2a;
+    --hover-color: #ff1493;
+    --border-color: rgba(255, 105, 180, 0.2);
+}
+
+body {
+    font-family: "Secular One";
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-color) 100%);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 10px;
+    line-height: 1.6;
+}
+
+a {
+    color: deeppink;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:visited {
+    color: #ff69b4;
+}
+
+a:hover {
+    color: #ff1493;
+    transform: translateY(-2px);
+}
+
+a:active {
+    color: #ff69b4;
+}
+
+ul {
+    margin-left: -15px;
+    list-style-type: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+nav ul li {
+    background: rgba(255, 105, 180, 0.1);
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+nav ul li:hover {
+    background: rgba(255, 105, 180, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+.latest-news article {
+    background: rgba(42, 42, 42, 0.95);
+    border: 1px solid rgba(255, 105, 180, 0.2);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.latest-news article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.15);
+    border-color: rgba(255, 105, 180, 0.4);
+}
+
+.latest-news article h2 {
+    color: #ff69b4;
+    margin-top: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.latest-news article a {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: rgba(255, 105, 180, 0.1);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    transition: all 0.3s ease;
+}
+
+.latest-news article a:hover {
+    background: rgba(255, 105, 180, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+header {
+    padding: 30px 0;
+    text-align: center;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+header h1 {
+    display: inline-block;
+    padding: 20px 40px;
+    border: 2px solid #ff69b4;
+    background: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    border-radius: 20px;
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+header h1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+    border-color: #ff69b4;
+}
+
+footer {
+    margin-top: auto;
+    padding: 30px;
+    text-align: center;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+footer p {
+    font-weight: bold;
+    color: #ff69b4;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.additional-content {
+    padding: 40px 20px;
+    background: rgba(26, 26, 26, 0.95);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 1px solid rgba(255, 105, 180, 0.2);
+    border-bottom: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+.popular-topics, .newsletter {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: rgba(42, 42, 42, 0.95);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 105, 180, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.popular-topics h2, .newsletter h2 {
+    color: #ff69b4;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.popular-topics ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popular-topics li {
+    margin-bottom: 15px;
+}
+
+.popular-topics a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 15px;
+    background: rgba(255, 105, 180, 0.1);
+    border: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+.popular-topics a:hover {
+    color: #ff69b4;
+    transform: translateY(-2px);
+    background: rgba(255, 105, 180, 0.2);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsletter input {
+    padding: 12px;
+    background: rgba(26, 26, 26, 0.95);
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    border-radius: 15px;
+    color: #ffffff;
+    font-family: "Secular One";
+}
+
+.newsletter input::placeholder {
+    color: #999999;
+}
+
+.newsletter button {
+    padding: 12px 25px;
+    background: rgba(255, 105, 180, 0.1);
+    color: #ff69b4;
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Secular One";
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background: rgba(255, 105, 180, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+.latest-news h2 {
+    color: #ff69b4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+        padding: 15px 30px;
+    }
+
+    .latest-news article {
+        padding: 20px;
+    }
+}
+
+.loader {
+    display: block; /* Видимый по умолчанию */
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+    color: var(--primary-color);
+    animation: pulsate 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsate {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Можно добавить анимацию, если нужно */
